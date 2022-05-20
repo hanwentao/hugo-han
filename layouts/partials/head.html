@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }}</title>
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   {{ if fileExists "/static/manifest.webmanifest" }}<link rel="manifest" href="{{ "manifest.webmanifest" | relURL }}">{{ end }}
   {{ if fileExists "/static/favicon.ico" }}<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">{{ end }}
   {{ if fileExists "/static/icon.svg" }}<link rel="icon" href="{{ "icon.svg" | relURL }}" type="image/svg+xml">{{ end }}
