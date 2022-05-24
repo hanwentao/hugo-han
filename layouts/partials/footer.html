@@ -1,3 +1,5 @@
+{{ if .Site.Copyright }}
 <footer>
-  &copy;2022 {{ .Site.Copyright | safeHTML }}
+  {{ .Site.Copyright | safeHTML }}
 </footer>
+{{ end }}
