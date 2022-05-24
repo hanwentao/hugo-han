@@ -258,10 +258,21 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-main {
+body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+@media screen {
+  footer {
+    text-align: center;
+  }
+}
+@media print {
+  footer {
+    display: none;
+  }
 }
 
 #title-block-header {
