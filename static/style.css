@@ -53,6 +53,10 @@
   margin-top: 0;
   margin-bottom: 1em;
 }
+.typo ul p,
+.typo ol p {
+  margin-bottom: 0;
+}
 .typo a {
   text-decoration: none;
   word-wrap: break-word;
@@ -95,6 +99,7 @@
   box-sizing: border-box;
   max-width: 100%;
   margin: auto auto 4px;
+  border: 1px solid #ccc;
 }
 .typo figure figcaption {
   font-size: 14px;
@@ -288,8 +293,22 @@ body {
   display: block;
   margin: 0 auto;
 }
+.two-columns {
+  display: flex;
+}
+.two-columns .column {
+  flex: 50%;
+}
 @media (min-width: 599px) {
   #avatar {
     float: right;
+  }
+}
+@media (max-width: 600px) {
+  .two-columns {
+    display: block;
+  }
+  .two-columns .column {
+    display: block;
   }
 }
